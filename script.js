@@ -26,10 +26,11 @@ const filme = {
 
     const lista = document.querySelector('.game-list-js');
         listaFilmes.map((filme, index) => {
-        lista.insertAdjacentElement('beforeend', `
-        <p>${filme.titulo}</p>
-        <p>${filme.genero}</p>
-        <p>${filme.nota}</p>
-        `)
+            lista.insertAdjacentHTML('beforeEnd', `
+            <p class='li'>${filme.titulo}</p>
+            <img class='li' src="${filme.url}">
+            <p class='li'>${filme.genero}</p>
+            <p class='li'>${filme.nota}</p>`
+            );
     })
 })
